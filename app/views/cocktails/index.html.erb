@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Cocktails (<%= @cocktails.length %>)</h1>
+
+  <ul>
+    <% @cocktails.each do |cocktail| %>
+      <li><%=link_to cocktail.name, cocktail_path(cocktail) %> // <%= link_to '🗑', cocktail_path(cocktail),  method: :delete %> </li>
+    <% end %>
+  </ul>
+
+  <%= link_to 'Submit New Cocktail Recipie', new_cocktail_path, class: 'btn btn-primary' %>
+</div>
