@@ -1,11 +1,28 @@
+
+
+  <div class="jumbotron"></div>
+
+  <div id='thing' class="card" style='margin-top: -100px;'>
+    <h1>🥃 The Best Cocktails in Town 🍸</h1>
+  </div>
+
 <div class="container">
   <h1>Cocktails (<%= @cocktails.length %>)</h1>
-
-  <ul>
+  <div class="row">
     <% @cocktails.each do |cocktail| %>
-      <li><%=link_to cocktail.name, cocktail_path(cocktail) %> // <%= link_to '🗑', cocktail_path(cocktail),  method: :delete %> </li>
+      <div class="col-xs-12 col-md-3">
+        <div class="card">
+          <p>
+          <%=link_to cocktail.name, cocktail_path(cocktail) %>
+          </p>
+          <p>
+          <%= link_to '🗑', cocktail_path(cocktail),  method: :delete %>
+          </p>
+        </div>
+      </div>
     <% end %>
-  </ul>
+  </div>
 
+  <br>
   <%= link_to 'Submit New Cocktail Recipie', new_cocktail_path, class: 'btn btn-primary' %>
 </div>

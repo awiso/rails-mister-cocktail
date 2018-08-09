@@ -1,1 +1,17 @@
 // Specific CSS for your home-page
+body {
+  background-color: whitesmoke;
+}
+
+.jumbotron {
+  background-image: url('https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') !important;
+  background-position: center;
+  height: 75vh;
+}
+
+.footer {
+  margin-bottom: 0;
+  text-align: center;
+  font-weight: lighter;
+
+}
