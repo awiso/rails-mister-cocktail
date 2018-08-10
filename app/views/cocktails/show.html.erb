@@ -9,9 +9,19 @@
       <p><%= dose.description %> of <%= dose.ingredient.name %> <%= link_to '🗑', dose_path(dose), method: :delete %></p>
     <% end %>
     
-
-
+    <h3>Reviews (<%= @cocktail.reviews.length %>)</h3>
+    <ul style='list-style: none;'>
+    <% @cocktail.reviews.each do |review| %>
+      <li>
+      <% review.rating.times do %>
+        ⭐️
+      <% end %>
+      <%= review.content %>
+      </li>
+    <% end %>
+    </ul>
     <br>
+    <%= link_to 'Add a review', new_cocktail_review_path(@cocktail), class: 'btn btn-success' %>
 
     <%= link_to 'Add New Ingredient', new_cocktail_dose_path(@cocktail.id), class: 'btn btn-success' %>
     <%= link_to 'Back to List', root_path, class: 'btn btn-primary' %>
