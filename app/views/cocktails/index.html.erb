@@ -12,6 +12,7 @@
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-md-3">
         <div class="card">
+          <%= cl_image_tag cocktail.photo, height: 150, width: 150, crop: :thumb %>
           <p>
           <%=link_to cocktail.name, cocktail_path(cocktail) %>
           </p>
