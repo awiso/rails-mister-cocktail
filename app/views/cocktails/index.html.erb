@@ -3,7 +3,7 @@
   <div class="jumbotron"></div>
 
   <div id='thing' class="card" style='margin-top: -100px;'>
-    <h1>🥃 The Best Cocktails in Town 🍸</h1>
+    <h1 id='list-head'>🍷 🥃 🍹 Best Cocktails in Town 🍸 🍺 🍾</h1>
   </div>
 
 <div class="container">
@@ -14,10 +14,7 @@
         <div class="card">
           <%= cl_image_tag cocktail.photo, height: 150, width: 150, crop: :thumb %>
           <p>
-          <%=link_to cocktail.name, cocktail_path(cocktail) %>
-          </p>
-          <p>
-          <%= link_to '🗑', cocktail_path(cocktail),  method: :delete %>
+          <%=link_to cocktail.name, cocktail_path(cocktail) %> <%= link_to '🗑', cocktail_path(cocktail),  method: :delete, class: 'cocktail-link' %>
           </p>
         </div>
       </div>

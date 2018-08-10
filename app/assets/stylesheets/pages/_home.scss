@@ -1,6 +1,14 @@
 // Specific CSS for your home-page
 body {
-  background-color: whitesmoke;
+  // background-color: whitesmoke;
+  min-height: 100vh;
+  background: #0B486B;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(#0B486B, #F56217);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(#0B486B, #F56217); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
 }
 
 .jumbotron {
@@ -14,4 +22,16 @@ body {
   text-align: center;
   font-weight: lighter;
 
+}
+
+.form-box {
+  background-color: white;
+  border-radius: 10px;
+  margin: 100px auto;
+  padding: 30px;
+}
+
+.cocktail-link {
+  color: black !important;
+  font-size: 20px !important;
 }
